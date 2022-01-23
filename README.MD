@@ -1,6 +1,6 @@
 # WordPress Excel export
 Implementation to use Excel export as a bulk action in the WordPress backend.
-To use with the Wefabric themosis implementation
+To use with the Wefabric themosis implementation. It uses the https://github.com/SpartnerNL/Laravel-Excel (v3.0) package.
 
 ## Installation
 Run the following command
@@ -15,15 +15,16 @@ php console vendor:publish --tag=wp-excel
 
 ## Usage
 Every post type needs to be registered for export before usage. 
+In the following example we will register the export class for a default WordPress post
 
-1. First you need to create the class which converts the posts data to a Illuminate Collection.
+1. First you need to create the class which converts the posts data to an Illuminate Collection.
 To do this run the following command
 ```shell
 php console make:export PostsExport
 ```
 
 2. Add the logic to export the WordPress posts to the Illuminate collection
-
+for example:
 ```php
 use Illuminate\Support\Collection;
 use Maatwebsite\Excel\Concerns\FromCollection;
@@ -88,4 +89,4 @@ return [
 
 ## Export formats
 The default export format is '.xlsx'. To use a different export change the 'default_format' in the wp-excel config file (config/wp-excel.php) to the correct format.
-The allowed export formats are: https://docs.laravel-excel.com/3.0/exports/export-formats.html
+The allowed export formats are located here: https://docs.laravel-excel.com/3.0/exports/export-formats.html
