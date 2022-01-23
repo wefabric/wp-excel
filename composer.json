@@ -1,0 +1,27 @@
+{
+  "name": "wefabric/wp-excel",
+  "description": "Implementation to use Excel export as a bulk action in the WordPress backend.",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Leo Flapper",
+      "email": "leo@wefabric.nl"
+    }
+  ],
+  "require": {
+    "maatwebsite/excel": "3.0.10"
+  },
+  "autoload": {
+    "psr-4": {
+      "Wefabric\\WPExcel\\": "./src"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Wefabric\\WPExcel\\Providers\\ServiceProvider"
+      ]
+    }
+  }
+}
