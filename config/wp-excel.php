@@ -17,9 +17,10 @@ return [
     'default_format' => 'xlsx',
 
     /**
-     * The storage disk which will be used to save the files before downloading
+     * The storage disk which will be used to save the files before downloading.
+     * It needs to be accessed public to successfully download
      */
-    'storage' => 'local',
+    'storage' => 'public',
 
     /**
      * The title to use in the WordPress backend bulk action select
