@@ -51,7 +51,7 @@ class PostsExport implements FromCollection, WithHeadings, WpPostsExcellable
     /**
     * @return \Illuminate\Support\Collection
     */
-    public function collection()
+    public function collection(): Collection
     {
         $args = [
             'post_type' => 'post'
