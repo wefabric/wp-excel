@@ -2,6 +2,10 @@
 Implementation to use Excel export as a bulk action in the WordPress backend.
 To use with the Wefabric themosis implementation. It uses the https://github.com/SpartnerNL/Laravel-Excel (v3.0) package.
 
+## Requirements
+- Wefabric WP Support
+- Themosis
+
 ## Installation
 Run the following command
 ```shell
@@ -88,5 +92,5 @@ return [
 4. Go to the WordPress backend (wp-admin/edit.php), select a post and run the bulk action.
 
 ## Export formats
-The default export format is '.xlsx'. To use a different export change the 'default_format' in the wp-excel config file (config/wp-excel.php) to the correct format.
+The default export format is 'XLSX'. To use a different export format change the 'default_format' in the wp-excel config file (config/wp-excel.php) to the correct format.
 The allowed export formats are located here: https://docs.laravel-excel.com/3.0/exports/export-formats.html
