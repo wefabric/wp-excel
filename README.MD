@@ -54,7 +54,8 @@ class PostsExport implements FromCollection, WithHeadings, WpPostsExcellable
     public function collection(): Collection
     {
         $args = [
-            'post_type' => 'post'
+            'post_type' => 'post',
+            'posts_per_page' => -1,
         ];
 
         if($this->postIds) {
